@@ -1,222 +1,240 @@
 .code
-extern iImportFunctions:QWORD
+extern ImportFuncTbl:QWORD
 BinkAllocateFrameBuffers PROC
-	jmp iImportFunctions[0*8]
+	jmp ImportFuncTbl[0 * 8]
 BinkAllocateFrameBuffers ENDP
 BinkClose PROC
-	jmp iImportFunctions[1*8]
+	jmp ImportFuncTbl[1 * 8]
 BinkClose ENDP
 BinkCloseTrack PROC
-	jmp iImportFunctions[2*8]
+	jmp ImportFuncTbl[2 * 8]
 BinkCloseTrack ENDP
 BinkControlBackgroundIO PROC
-	jmp iImportFunctions[3*8]
+	jmp ImportFuncTbl[3 * 8]
 BinkControlBackgroundIO ENDP
 BinkCopyToBuffer PROC
-	jmp iImportFunctions[4*8]
+	jmp ImportFuncTbl[4 * 8]
 BinkCopyToBuffer ENDP
 BinkCopyToBufferRect PROC
-	jmp iImportFunctions[5*8]
+	jmp ImportFuncTbl[5 * 8]
 BinkCopyToBufferRect ENDP
+BinkCurrentSubtitle PROC
+	jmp ImportFuncTbl[6 * 8]
+BinkCurrentSubtitle ENDP
 BinkDoFrame PROC
-	jmp iImportFunctions[6*8]
+	jmp ImportFuncTbl[7 * 8]
 BinkDoFrame ENDP
 BinkDoFrameAsync PROC
-	jmp iImportFunctions[7*8]
+	jmp ImportFuncTbl[8 * 8]
 BinkDoFrameAsync ENDP
 BinkDoFrameAsyncMulti PROC
-	jmp iImportFunctions[8*8]
+	jmp ImportFuncTbl[9 * 8]
 BinkDoFrameAsyncMulti ENDP
 BinkDoFrameAsyncWait PROC
-	jmp iImportFunctions[9*8]
+	jmp ImportFuncTbl[10 * 8]
 BinkDoFrameAsyncWait ENDP
 BinkDoFramePlane PROC
-	jmp iImportFunctions[10*8]
+	jmp ImportFuncTbl[11 * 8]
 BinkDoFramePlane ENDP
+BinkFindXAudio2WinDevice PROC
+	jmp ImportFuncTbl[12 * 8]
+BinkFindXAudio2WinDevice ENDP
 BinkFreeGlobals PROC
-	jmp iImportFunctions[11*8]
+	jmp ImportFuncTbl[13 * 8]
 BinkFreeGlobals ENDP
 BinkGetError PROC
-	jmp iImportFunctions[12*8]
+	jmp ImportFuncTbl[14 * 8]
 BinkGetError ENDP
 BinkGetFrameBuffersInfo PROC
-	jmp iImportFunctions[13*8]
+	jmp ImportFuncTbl[15 * 8]
 BinkGetFrameBuffersInfo ENDP
 BinkGetGPUDataBuffersInfo PROC
-	jmp iImportFunctions[14*8]
+	jmp ImportFuncTbl[16 * 8]
 BinkGetGPUDataBuffersInfo ENDP
 BinkGetKeyFrame PROC
-	jmp iImportFunctions[15*8]
+	jmp ImportFuncTbl[17 * 8]
 BinkGetKeyFrame ENDP
 BinkGetPlatformInfo PROC
-	jmp iImportFunctions[16*8]
+	jmp ImportFuncTbl[18 * 8]
 BinkGetPlatformInfo ENDP
 BinkGetRealtime PROC
-	jmp iImportFunctions[17*8]
+	jmp ImportFuncTbl[19 * 8]
 BinkGetRealtime ENDP
 BinkGetRects PROC
-	jmp iImportFunctions[18*8]
+	jmp ImportFuncTbl[20 * 8]
 BinkGetRects ENDP
+BinkGetSubtitleByIndex PROC
+	jmp ImportFuncTbl[21 * 8]
+BinkGetSubtitleByIndex ENDP
 BinkGetSummary PROC
-	jmp iImportFunctions[19*8]
+	jmp ImportFuncTbl[22 * 8]
 BinkGetSummary ENDP
 BinkGetTrackData PROC
-	jmp iImportFunctions[20*8]
+	jmp ImportFuncTbl[23 * 8]
 BinkGetTrackData ENDP
 BinkGetTrackID PROC
-	jmp iImportFunctions[21*8]
+	jmp ImportFuncTbl[24 * 8]
 BinkGetTrackID ENDP
 BinkGetTrackMaxSize PROC
-	jmp iImportFunctions[22*8]
+	jmp ImportFuncTbl[25 * 8]
 BinkGetTrackMaxSize ENDP
 BinkGetTrackType PROC
-	jmp iImportFunctions[23*8]
+	jmp ImportFuncTbl[26 * 8]
 BinkGetTrackType ENDP
 BinkGoto PROC
-	jmp iImportFunctions[24*8]
+	jmp ImportFuncTbl[27 * 8]
 BinkGoto ENDP
+BinkLoadSubtitles PROC
+	jmp ImportFuncTbl[28 * 8]
+BinkLoadSubtitles ENDP
 BinkLogoAddress PROC
-	jmp iImportFunctions[25*8]
+	jmp ImportFuncTbl[29 * 8]
 BinkLogoAddress ENDP
 BinkNextFrame PROC
-	jmp iImportFunctions[26*8]
+	jmp ImportFuncTbl[30 * 8]
 BinkNextFrame ENDP
 BinkOpen PROC
-	jmp iImportFunctions[27*8]
+	jmp ImportFuncTbl[31 * 8]
 BinkOpen ENDP
 BinkOpenDirectSound PROC
-	jmp iImportFunctions[28*8]
+	jmp ImportFuncTbl[32 * 8]
 BinkOpenDirectSound ENDP
-BinkOpenMiles PROC
-	jmp iImportFunctions[29*8]
-BinkOpenMiles ENDP
 BinkOpenTrack PROC
-	jmp iImportFunctions[30*8]
+	jmp ImportFuncTbl[33 * 8]
 BinkOpenTrack ENDP
 BinkOpenWaveOut PROC
-	jmp iImportFunctions[31*8]
+	jmp ImportFuncTbl[34 * 8]
 BinkOpenWaveOut ENDP
 BinkOpenWithOptions PROC
-	jmp iImportFunctions[32*8]
+	jmp ImportFuncTbl[35 * 8]
 BinkOpenWithOptions ENDP
 BinkOpenXAudio2 PROC
-	jmp iImportFunctions[33*8]
+	jmp ImportFuncTbl[36 * 8]
 BinkOpenXAudio2 ENDP
 BinkOpenXAudio27 PROC
-	jmp iImportFunctions[34*8]
+	jmp ImportFuncTbl[37 * 8]
 BinkOpenXAudio27 ENDP
 BinkOpenXAudio28 PROC
-	jmp iImportFunctions[35*8]
+	jmp ImportFuncTbl[38 * 8]
 BinkOpenXAudio28 ENDP
+BinkOpenXAudio29 PROC
+	jmp ImportFuncTbl[39 * 8]
+BinkOpenXAudio29 ENDP
 BinkPause PROC
-	jmp iImportFunctions[36*8]
+	jmp ImportFuncTbl[40 * 8]
 BinkPause ENDP
 BinkRegisterFrameBuffers PROC
-	jmp iImportFunctions[37*8]
+	jmp ImportFuncTbl[41 * 8]
 BinkRegisterFrameBuffers ENDP
 BinkRegisterGPUDataBuffers PROC
-	jmp iImportFunctions[38*8]
+	jmp ImportFuncTbl[42 * 8]
 BinkRegisterGPUDataBuffers ENDP
 BinkRequestStopAsyncThread PROC
-	jmp iImportFunctions[39*8]
+	jmp ImportFuncTbl[43 * 8]
 BinkRequestStopAsyncThread ENDP
 BinkRequestStopAsyncThreadsMulti PROC
-	jmp iImportFunctions[40*8]
+	jmp ImportFuncTbl[44 * 8]
 BinkRequestStopAsyncThreadsMulti ENDP
 BinkService PROC
-	jmp iImportFunctions[41*8]
+	jmp ImportFuncTbl[45 * 8]
 BinkService ENDP
 BinkSetError PROC
-	jmp iImportFunctions[42*8]
+	jmp ImportFuncTbl[46 * 8]
 BinkSetError ENDP
 BinkSetFileOffset PROC
-	jmp iImportFunctions[43*8]
+	jmp ImportFuncTbl[47 * 8]
 BinkSetFileOffset ENDP
 BinkSetFrameRate PROC
-	jmp iImportFunctions[44*8]
+	jmp ImportFuncTbl[48 * 8]
 BinkSetFrameRate ENDP
 BinkSetIO PROC
-	jmp iImportFunctions[45*8]
+	jmp ImportFuncTbl[49 * 8]
 BinkSetIO ENDP
 BinkSetIOSize PROC
-	jmp iImportFunctions[46*8]
+	jmp ImportFuncTbl[50 * 8]
 BinkSetIOSize ENDP
 BinkSetMemory PROC
-	jmp iImportFunctions[47*8]
+	jmp ImportFuncTbl[51 * 8]
 BinkSetMemory ENDP
 BinkSetOSFileCallbacks PROC
-	jmp iImportFunctions[48*8]
+	jmp ImportFuncTbl[52 * 8]
 BinkSetOSFileCallbacks ENDP
 BinkSetPan PROC
-	jmp iImportFunctions[49*8]
+	jmp ImportFuncTbl[53 * 8]
 BinkSetPan ENDP
 BinkSetSimulate PROC
-	jmp iImportFunctions[50*8]
+	jmp ImportFuncTbl[54 * 8]
 BinkSetSimulate ENDP
 BinkSetSoundOnOff PROC
-	jmp iImportFunctions[51*8]
+	jmp ImportFuncTbl[55 * 8]
 BinkSetSoundOnOff ENDP
 BinkSetSoundSystem PROC
-	jmp iImportFunctions[52*8]
+	jmp ImportFuncTbl[56 * 8]
 BinkSetSoundSystem ENDP
 BinkSetSoundSystem2 PROC
-	jmp iImportFunctions[53*8]
+	jmp ImportFuncTbl[57 * 8]
 BinkSetSoundSystem2 ENDP
 BinkSetSoundTrack PROC
-	jmp iImportFunctions[54*8]
+	jmp ImportFuncTbl[58 * 8]
 BinkSetSoundTrack ENDP
 BinkSetSpeakerVolumes PROC
-	jmp iImportFunctions[55*8]
+	jmp ImportFuncTbl[59 * 8]
 BinkSetSpeakerVolumes ENDP
 BinkSetVideoOnOff PROC
-	jmp iImportFunctions[56*8]
+	jmp ImportFuncTbl[60 * 8]
 BinkSetVideoOnOff ENDP
 BinkSetVolume PROC
-	jmp iImportFunctions[57*8]
+	jmp ImportFuncTbl[61 * 8]
 BinkSetVolume ENDP
 BinkSetWillLoop PROC
-	jmp iImportFunctions[58*8]
+	jmp ImportFuncTbl[62 * 8]
 BinkSetWillLoop ENDP
 BinkShouldSkip PROC
-	jmp iImportFunctions[59*8]
+	jmp ImportFuncTbl[63 * 8]
 BinkShouldSkip ENDP
 BinkStartAsyncThread PROC
-	jmp iImportFunctions[60*8]
+	jmp ImportFuncTbl[64 * 8]
 BinkStartAsyncThread ENDP
 BinkUtilCPUs PROC
-	jmp iImportFunctions[61*8]
+	jmp ImportFuncTbl[65 * 8]
 BinkUtilCPUs ENDP
 BinkUtilFree PROC
-	jmp iImportFunctions[62*8]
+	jmp ImportFuncTbl[66 * 8]
 BinkUtilFree ENDP
 BinkUtilMalloc PROC
-	jmp iImportFunctions[63*8]
+	jmp ImportFuncTbl[67 * 8]
 BinkUtilMalloc ENDP
 BinkUtilMutexCreate PROC
-	jmp iImportFunctions[64*8]
+	jmp ImportFuncTbl[68 * 8]
 BinkUtilMutexCreate ENDP
 BinkUtilMutexDestroy PROC
-	jmp iImportFunctions[65*8]
+	jmp ImportFuncTbl[69 * 8]
 BinkUtilMutexDestroy ENDP
 BinkUtilMutexLock PROC
-	jmp iImportFunctions[66*8]
+	jmp ImportFuncTbl[70 * 8]
 BinkUtilMutexLock ENDP
 BinkUtilMutexLockTimeOut PROC
-	jmp iImportFunctions[67*8]
+	jmp ImportFuncTbl[71 * 8]
 BinkUtilMutexLockTimeOut ENDP
 BinkUtilMutexUnlock PROC
-	jmp iImportFunctions[68*8]
+	jmp ImportFuncTbl[72 * 8]
 BinkUtilMutexUnlock ENDP
+BinkUtilSoundGlobalLock PROC
+	jmp ImportFuncTbl[73 * 8]
+BinkUtilSoundGlobalLock ENDP
+BinkUtilSoundGlobalUnlock PROC
+	jmp ImportFuncTbl[74 * 8]
+BinkUtilSoundGlobalUnlock ENDP
 BinkWait PROC
-	jmp iImportFunctions[69*8]
+	jmp ImportFuncTbl[75 * 8]
 BinkWait ENDP
 BinkWaitStopAsyncThread PROC
-	jmp iImportFunctions[70*8]
+	jmp ImportFuncTbl[76 * 8]
 BinkWaitStopAsyncThread ENDP
 BinkWaitStopAsyncThreadsMulti PROC
-	jmp iImportFunctions[71*8]
+	jmp ImportFuncTbl[77 * 8]
 BinkWaitStopAsyncThreadsMulti ENDP
 RADTimerRead PROC
-	jmp iImportFunctions[72*8]
+	jmp ImportFuncTbl[78 * 8]
 RADTimerRead ENDP
 end
