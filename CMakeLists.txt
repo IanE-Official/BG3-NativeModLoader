@@ -12,7 +12,7 @@ include(GNUInstallDirs)
 
 # info
 project(
-	NativeModLoader
+	IEBG3-native-mod-loader
 	VERSION 1.0.1
 	LANGUAGES CXX
 )
