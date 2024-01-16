@@ -1,3 +1,6 @@
 [submodule "extern/vcpkg"]
 	path = extern/vcpkg
 	url = https://github.com/microsoft/vcpkg.git
+[submodule "extern/DKUtil"]
+	path = extern/DKUtil
+	url = https://github.com/gottyduke/DKUtil.git
